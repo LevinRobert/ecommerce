@@ -1,0 +1,24 @@
+---
+- name: Install Git and Nginx using yum
+  hosts: all
+  become: yes
+
+  vars:
+    user:
+      - suraj
+      - akash
+      - rahul
+      - abc
+      - vbc
+      - hasam
+
+    user1:
+      - hgmuisd
+      - csd
+
+  tasks:
+    - name: Create users from user1 list
+      ansible.builtin.user:
+        name: "{{ item }}"
+      with_items:
+        - "{{ user1 }}"
