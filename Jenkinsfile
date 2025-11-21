@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {
-                        sh "docker build -t levin16robert/main:latest ."
+                        sh "docker build -t levin16robert/ecommerce:latest ."
                     }
                 }
             }
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {
-                        sh "docker push levin16robert/main:latest"
+                        sh "docker push levin16robert/ecommerce:latest"
                     }
                 }
             }
