@@ -25,7 +25,7 @@ spec:
         - name: dockerhub-secret
       containers:
         - name: server
-          image: levin16robert/main:latest
+          image: levin16robert/ecommerce:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -107,7 +107,7 @@ spec:
         - name: dockerhub-secret
       containers:
         - name: server
-          image: levin16robert/main:latest
+          image: levin16robert/ecommerce:latest
           ports:
             - containerPort: 3550
           env:
